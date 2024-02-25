@@ -65,6 +65,37 @@
             margin-bottom: 20px;
         }
 
+        /* Team Section */
+        .team {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            width: calc(33.33% - 20px);
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member img {
+            max-width: 100%;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .team-member h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .team-member p {
+            font-size: 16px;
+        }
+
         /* Footer */
         footer {
             background-color: #333;
@@ -90,8 +121,48 @@
 
     <div class="container">
         <h2>Welcome to BugEye Media</h2>
-        <p>We are a full-service production team dedicated to bringing your vision to life. Whether you need video production, photography, or graphic design, we have the expertise to deliver satisfactionary results.</p>
+        <p>We are a full-service production team dedicated to bringing your vision to life. Whether you need video production, photography, or graphic design, we have the expertise to deliver satisfactory results.</p>
         <p>Contact us today to discuss your project!</p>
+
+        <h2>Meet the Team</h2>
+        <div class="team">
+            <!-- Team Member 1 -->
+            <div class="team-member">
+                <img src="images/team_member_1.jpg" alt="Team Member 1">
+                <h3>Wayne Levan</h3>
+                <p>Teacher/Facilitator</p>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="team-member">
+                <img src="images/team_member_2.jpg" alt="Team Member 2">
+                <h3>Sammy Campos</h3>
+                <p>IT Technician</p>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="team-member">
+                <img src="images/team_member_3.jpg" alt="Team Member 3">
+                <h3>Brad Childers</h3>
+                <p>Productions/Team Manager</p>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="team-member">
+                <img src="images/team_member_4.jpg" alt="Team Member 4">
+                <h3>Jackson (Rab) Bolton</h3>
+                <p>Jr IT Technician (In Training)</p>
+            </div>
+            <!-- Team Member 5 -->
+            <div class="team-member">
+                <img src="images/team_member_5.jpg" alt="Team Member 5">
+                <h3>Aiden Hunter</h3>
+                <p>Yeehaw cowboy man</p>
+            </div>
+            <!-- Team Member 6 -->
+            <div class="team-member">
+                <img src="images/team_member_6.jpg" alt="Team Member 6">
+                <h3>Emily Taylor</h3>
+                <p>Role: Sound Engineer</p>
+            </div>
+        </div>
     </div>
 
     <footer>
