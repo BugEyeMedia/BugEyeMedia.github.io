@@ -50,6 +50,39 @@
     <p>&copy; 2024 BugEye Media. All rights reserved.</p>
   </footer>
 
-  <script src="scripts.js"></script>
+    <script src="scripts.js"></script>
+  <script>
+    // Function to show Twitch embed between 1:00 PM and 1:17 PM
+    function showTwitchEmbed() {
+      var now = new Date();
+      var hours = now.getHours();
+      var minutes = now.getMinutes();
+
+      // Define the start and end times for the Twitch embed (e.g., from 13:00 to 13:17)
+      var startTime = 13; // 1:00 PM
+      var endTime = 13; // 1:17 PM
+
+      // Check if the current time is within the specified range
+      if (hours == startTime && minutes >= 0 && hours < endTime && minutes <= 17) {
+        document.getElementById('twitchEmbed').innerHTML = `
+          <iframe
+            src="https://player.twitch.tv/?channel=FerrisAVArts"
+            height="480"
+            width="853"
+            frameborder="0"
+            scrolling="no"
+            allowfullscreen="true">
+          </iframe>`;
+      } else {
+        document.getElementById('twitchEmbed').innerHTML = '<p>The stream will be available between 1:00 PM and 1:17 PM.</p>';
+      }
+    }
+
+    // Call the function initially when the page loads
+    showTwitchEmbed();
+
+    // Call the function every minute to update the Twitch embed status
+    setInterval(showTwitchEmbed, 60000); // Update every minute
+  </script>
 </body>
 </html>
