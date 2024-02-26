@@ -2,14 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="author" content="A TV Show For The Students, By The Student."
+  <meta name="author" content="A TV Show For The Students, By The Student.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Brick Factory TV Show</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="images/favicon.png"> <!-- Favicon -->
   <meta name="theme-color" content="#ff8c00">
   <meta name="description" content="Welcome to The Brick Factory. This is a TV show created by the students of Ferris AV Arts to give you all your news, sports updates, weather, and more!">
-
+  <style>
+    #twitch-embed {
+      text-align: center;
+    }
+    #twitch-embed iframe {
+      width: 80%; /* Adjust the width as needed */
+      max-width: 960px; /* Maximum width */
+      height: 480px; /* Adjust the height as needed */
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -24,14 +33,7 @@
     </div>
   </section>
 
-  <div id="twitch-embed"></div>een>
-  <script src="https://player.twitch.tv/js/embed/v1.js"></script>
-  <script type="text/javascript">
-  new Twitch.Player("twitch-embed", {
-    channel: "ferrisavarts"
-  });
-</script>
-  </div>
+  <div id="twitch-embed"></div>
 
   <section id="cast">
     <div class="container">
@@ -48,7 +50,12 @@
     <p>&copy; 2024 BugEye Media. All rights reserved.</p>
   </footer>
 
-    <script src="scripts.js"></script>
-
+  <script src="scripts.js"></script>
+  <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+  <script type="text/javascript">
+    new Twitch.Player("twitch-embed", {
+      channel: "ferrisavarts"
+    });
+  </script>
 </body>
 </html>
