@@ -165,10 +165,35 @@
         </ul>
     </nav>
 
-    <div class="container">
-        <h2>Welcome to BugEye Media</h2>
-        <p>We are a full-service production team dedicated to bringing your vision to life. Whether you need video production, photography, or graphic design, we have the expertise to deliver satisfactory results.</p>
-        <p>Contact us today to discuss your project!</p>
+   <div class="container">
+        <div>
+            <button id="currentMessageBtn">Current Message</button>
+            <button id="newsBtn">News</button>
+        </div>
+        <div id="currentMessageSection">
+            <!-- Content for current message section -->
+            <h2>Welcome to BugEye Media</h2>
+            <p>We are a full-service production team dedicated to bringing your vision to life. Whether you need video production, photography, or graphic design, we have the expertise to deliver satisfactory results.</p>
+            <p>Contact us today to discuss your project!</p>
+        </div>
+        <div id="newsSection" style="display: none;">
+            <!-- Content for news section -->
+            <h2>Latest News</h2>
+            <p>Here's the latest news from BugEye Media.</p>
+        </div>
+    </div>
+
+     <script>
+        document.getElementById("currentMessageBtn").addEventListener("click", function() {
+            document.getElementById("currentMessageSection").style.display = "block";
+            document.getElementById("newsSection").style.display = "none";
+        });
+
+        document.getElementById("newsBtn").addEventListener("click", function() {
+            document.getElementById("currentMessageSection").style.display = "none";
+            document.getElementById("newsSection").style.display = "block";
+        });
+    </script>
 
          <h2>Meet the Team</h2>
         <div class="team">
