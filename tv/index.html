@@ -10,6 +10,20 @@
   <meta name="theme-color" content="#ff8c00">
   <meta name="description" content="Welcome to The Brick Factory. This is a TV show created by the students of Ferris AV Arts to give you all your news, sports updates, weather, and more!">
   <style>
+    /* Centering content */
+    .center-content {
+      text-align: center;
+    }
+    /* Adjust cast list layout */
+    .cast {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .team-member {
+      margin: 10px;
+      text-align: center;
+    }
     #twitch-embed {
       text-align: center;
     }
@@ -33,40 +47,41 @@
     </div>
   </section>
 
-  <center>
-  <div id="twitch-embed"></div>
+  <div class="center-content">
+    <div id="twitch-embed"></div>
 
-   <h2>Cast And Crew</h2>
-    <h1> CAST </h1>
-        <div class="cast">
-            <!-- Team Member 1 -->
-            <div class="team-member">
-                <h3>Aiden Hunter</h3>
-                <p>Anchor</p>
-            </div>
-            <!-- Team Member 2 -->
-            <div class="team-member">
-                <h3>Ivan Leija</h3>
-                <p>Anchor</p>
-            </div>
-            <!-- Team Member 3 -->
-            <div class="team-member">
-                <h3>Anthony Moreno</h3>
-                <p>Weather/School News</p>
-            </div>
-            <!-- Team Member 4 -->
-            <div class="team-member">
-                <h3>Alex Alvarez</h3>
-                <p>Sports</p>
-            </div>
-               <!-- Team Member 5 -->
-          <div class="team-member">
-                <h3>Troy Johnston</h3>
-                <p>Troys Corner</p>
-            </div>
-      <h1> CREW</h1>
-        </div>
-</center>
+    <h2>Cast And Crew</h2>
+    <h1>CAST</h1>
+    <div class="cast">
+      <!-- Team Member 1 -->
+      <div class="team-member">
+        <h3>Aiden Hunter</h3>
+        <p>Anchor</p>
+      </div>
+      <!-- Team Member 2 -->
+      <div class="team-member">
+        <h3>Ivan Leija</h3>
+        <p>Anchor</p>
+      </div>
+      <!-- Team Member 3 -->
+      <div class="team-member">
+        <h3>Anthony Moreno</h3>
+        <p>Weather/School News</p>
+      </div>
+      <!-- Team Member 4 -->
+      <div class="team-member">
+        <h3>Alex Alvarez</h3>
+        <p>Sports</p>
+      </div>
+      <!-- Team Member 5 -->
+      <div class="team-member">
+        <h3>Troy Johnston</h3>
+        <p>Troys Corner</p>
+      </div>
+    </div>
+    <h1>CREW</h1>
+  </div>
+
   <footer>
     <p>&copy; 2024 BugEye Media. All rights reserved.</p>
   </footer>
