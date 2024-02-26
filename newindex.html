@@ -7,6 +7,83 @@
     <title>BugEye Media</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
+
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .options {
+            margin-bottom: 20px;
+        }
+
+        .options button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .options button:last-child {
+            margin-right: 0;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+    
         /* Reset CSS */
         body, h1, h2, p, ul, li {
             margin: 0;
@@ -165,23 +242,19 @@
         </ul>
     </nav>
 
-   <div class="container">
-        <div>
+ <div class="container">
+        <div class="options">
             <button id="currentMessageBtn">Current Message</button>
             <button id="newsBtn">News</button>
         </div>
-        <div id="currentMessageSection">
-            <!-- Content for current message section -->
+        <div class="section active" id="currentMessageSection">
             <h2>Welcome to BugEye Media</h2>
             <p>We are a full-service production team dedicated to bringing your vision to life. Whether you need video production, photography, or graphic design, we have the expertise to deliver satisfactory results.</p>
             <p>Contact us today to discuss your project!</p>
         </div>
-        <div id="newsSection" style="display: none;">
-            <!-- Content for news section -->
+        <div class="section" id="newsSection">
             <h2>Latest News</h2>
             <p>Here's the latest news from BugEye Media.</p>
-        </div>
-    </div>
 
      <script>
         document.getElementById("currentMessageBtn").addEventListener("click", function() {
