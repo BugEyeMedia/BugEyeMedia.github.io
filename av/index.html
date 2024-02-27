@@ -76,7 +76,7 @@
          width: 100%;
          display: flex;
          justify-content: space-between;
-         pointer-events: none; /* Avoid nav interfering with click events on images */
+         z-index: 1; /* Ensure the arrows are above the images */
       }
       .carousel-nav button {
          background: rgba(255, 255, 255, 0.5);
@@ -86,7 +86,6 @@
          padding: 5px 10px;
          border-radius: 50%;
          cursor: pointer;
-         pointer-events: all;
       }
       .carousel-nav button:hover {
          background: rgba(255, 255, 255, 0.8);
