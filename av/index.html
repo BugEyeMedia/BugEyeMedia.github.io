@@ -24,6 +24,10 @@
          top: 0;
          z-index: 1000;
       }
+      header a {
+         text-decoration: none;
+         color: #fff;
+      }
       header button {
          background-color: #0055ff;
          color: #fff;
@@ -72,7 +76,7 @@
 </head>
 <body>
    <header>
-       <a href="https://bugeyemedia.com" target="_blank"><button>Back to Home</button></a>
+      <a href="https://bugeyemedia.com"><button>Back to Home</button></a>
    </header>
    <div class="container" id="home">
       <h1>Ferris AV Arts</h1>
@@ -90,14 +94,5 @@
    <div class="footer">
       &copy; 2024 BugEye Media
    </div>
-
-   <script>
-      function scrollToTop() {
-         window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-         });
-      }
-   </script>
 </body>
 </html>
