@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduation Livestream</title>
+    <link rel="icon" href="https://bugeyemedia.com/images/BEM.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        header {
+            background-color: #FF6F00;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header img {
+            height: 50px;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+        }
+        .content {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .content h2 {
+            color: #FF6F00;
+        }
+        .content p {
+            color: #333;
+            font-size: 18px;
+        }
+        .notification-bar {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            display: none;
+        }
+        .toggle-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #FF6F00;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://bugeyemedia.com/images/BEM.png" alt="BugEye Media Logo">
+        <h1>Ferris ISD Graduation Livestream</h1>
+    </header>
+    <div class="notification-bar" id="notificationBar">
+        Graduation has been delayed. Please stay tuned for further updates.
+    </div>
+    <div class="content">
+        <h2>Join Us for the Graduation Livestream!</h2>
+        <p>We are excited to bring you the Ferris ISD graduation ceremony live on our Facebook page. This event is brought to you by BugEye Media.</p>
+        <p>Don't miss the special moments as we celebrate the achievements of our graduates.</p>
+    </div>
+    <script>
+        function toggleNotification(visible) {
+            var notificationBar = document.getElementById('notificationBar');
+            if (visible) {
+                notificationBar.style.display = "block";
+            } else {
+                notificationBar.style.display = "none";
+            }
+        }
+        
+        // Call the function with true to show the notification, or false to hide it
+        toggleNotification(true);
+    </script>
+</body>
+</html>
