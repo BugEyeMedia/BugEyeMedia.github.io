@@ -21,6 +21,7 @@
             padding: 10px 20px; /* Reduced padding */
             text-align: center;
             margin-bottom: 10px; /* Reduce margin */
+            border-bottom: none; /* Remove border */
         }
 
         header img {
@@ -84,8 +85,8 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .section.active {
-            display: block;
+        .active {
+            display: block; /* Changed from display: block to display: none */
         }
 
         .welcome-section {
@@ -98,28 +99,6 @@
 
         h2 {
             margin-top: 0;
-        }
-
-        /* Banner styles */
-        .banner {
-            background-color: #ffd700; /* Yellow color */
-            padding: 10px; /* Reduced padding */
-            text-align: center;
-            margin-bottom: 20px; /* Add margin to separate from content */
-        }
-
-        .banner p {
-            margin: 0; /* Remove default margin */
-            display: inline; /* Display inline with the button */
-        }
-
-        .button {
-            background-color: black;
-            color: white;
-            padding: 8px 16px; /* Adjust padding */
-            text-decoration: none;
-            border-radius: 10px; /* Adjust border-radius */
-            margin-top: 10px; /* Add margin for spacing */
         }
 
         /* Added styles */
@@ -149,7 +128,7 @@
 <body>
     <header>
         <img src="images/favicon.png" alt="BugEye Media Icon" height="30">
-        <h1 style="display: inline-block; vertical-align: middle;">BugEye Media</h1>
+        <h1 style="display: inline-block; vertical-align: middle; margin: 0;">BugEye Media</h1>
     </header>
 
     <nav>
@@ -163,7 +142,7 @@
 
     <div class="container">
         <div class="options">
-            <button id="currentMessageBtn" class="active-button">Welcome!</button>
+            <button id="currentMessageBtn" class="active">Welcome!</button>
             <button id="newsBtn">News</button>
         </div>
 
@@ -241,14 +220,14 @@
         // Add event listeners to the buttons
         currentMessageBtn.addEventListener("click", function() {
             showWelcomeSection();
-            currentMessageBtn.classList.add("active-button");
-            newsBtn.classList.remove("active-button");
+            currentMessageBtn.classList.add("active");
+            newsBtn.classList.remove("active");
         });
 
         newsBtn.addEventListener("click", function() {
             showNewsSection();
-            newsBtn.classList.add("active-button");
-            currentMessageBtn.classList.remove("active-button");
+            newsBtn.classList.add("active");
+            currentMessageBtn.classList.remove("active");
         });
 
         // Function to show the welcome section
