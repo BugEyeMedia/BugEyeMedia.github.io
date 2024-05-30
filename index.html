@@ -7,7 +7,6 @@
     <title>BugEye Media</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
-
         /* CSS styles */
         body {
             font-family: Arial, sans-serif;
@@ -26,6 +25,7 @@
         header img {
             margin-right: 10px; /* Adjust as needed */
         }
+
         nav {
             background-color: #444;
             padding: 10px;
@@ -86,148 +86,27 @@
         h2 {
             margin-top: 0;
         }
-    
-        /* Reset CSS */
-        body, h1, h2, p, ul, li {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
 
-        /* Header */
-        header {
-            background-color: #333;
-            color: #fff;
+        /* Banner styles */
+        .banner {
+            background-color: #ffd700; /* Yellow color */
             padding: 20px;
             text-align: center;
+            margin-bottom: 20px; /* Add margin to separate from content */
         }
 
-        /* Navigation */
-        nav {
-            background-color: #444;
-            padding: 10px;
-            text-align: center;
+        .banner p {
+            margin: 0; /* Remove default margin */
         }
 
-        nav ul {
-            list-style-type: none;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        /* Main Content */
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-
-        p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        /* Team Section */
-        .team {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .team-member {
-            width: calc(33.33% - 20px);
-            margin-bottom: 40px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .team-member img {
-            max-width: 100%;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-
-        .team-member h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .team-member p {
-            font-size: 16px;
-        }
-
-        /* Projects Section */
-        .projects {
-            margin-top: 40px;
-        }
-
-        .project {
-            margin-bottom: 20px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .project h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .project p {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        .project-button {
-            display: block;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
+        .button {
+            display: inline-block;
+            background-color: black;
+            color: white;
             padding: 10px 20px;
-            text-align: center;
             text-decoration: none;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .project-button:hover {
-            background-color: #555;
-        }
-
-        /* Larger Box for Latest Project */
-        .latest-project {
-            margin-bottom: 20px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
+            border-radius: 20px;
+            margin-top: 10px; /* Add margin for spacing */
         }
     </style>
 </head>
@@ -246,7 +125,13 @@
         </ul>
     </nav>
 
- <div class="container">
+    <!-- Yellow banner with "Learn More" button -->
+    <div class="banner">
+        <p>Learn More About Our 2024 Graduation Broadcast</p>
+        <a href="https://bugeyemedia.com/graduation" class="button">Learn More</a>
+    </div>
+
+    <div class="container">
         <div class="options">
             <button id="currentMessageBtn">Welcome!</button>
             <button id="newsBtn">News</button>
