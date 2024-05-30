@@ -69,9 +69,6 @@
             padding: 10px 20px;
             margin-right: 10px;
             cursor: pointer;
-            /* Make buttons rectangular */
-            border-radius: 0;
-            display: inline-block;
         }
 
         .options button:last-child {
@@ -80,13 +77,21 @@
 
         .section {
             display: none;
-            border: 1px solid #ccc; /* Add border */
-            padding: 10px; /* Add padding */
-            border-radius: 10px; /* Rounded corners */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .section.active {
             display: block;
+        }
+
+        .welcome-section {
+            background-color: #f2f2f2;
+        }
+
+        .news-section {
+            background-color: #eaeaea;
         }
 
         h2 {
@@ -150,28 +155,24 @@
         </ul>
     </nav>
 
-    <!-- Yellow banner with "Learn More" button -->
-    <div class="banner">
-        <p>Learn More About Our 2024 Graduation Broadcast</p>
-        <a href="https://bugeyemedia.com/graduation" class="button">Learn More</a>
-    </div>
-
     <div class="container">
-        <div class="options">
-            <button id="currentMessageBtn">Welcome!</button>
-            <button id="newsBtn">News</button>
-        </div>
-        <div class="section active" id="currentMessageSection">
+        <div class="welcome-section section active">
+            <div class="options">
+                <button id="currentMessageBtn">Welcome!</button>
+            </div>
             <h2>Welcome to BugEye Media</h2>
             <p>We are a full-service production team dedicated to bringing your vision to life. Whether you need video production, photography, or graphic design, we have the expertise to deliver satisfactory results.</p>
             <p>Contact us today to discuss your project!</p>
         </div>
-        <div class="section" id="newsSection">
+
+        <div class="news-section section">
+            <div class="options">
+                <button id="newsBtn">News</button>
+            </div>
             <h2>Latest News</h2>
             <p>Here's the latest news from BugEye Media.</p>
-
-            <h1> Graduation 2024 </h1>
-            <p> We are please to announce that we will be broadcasting the 2024 Ferris High School Graduation. <a href="https://bugeyemedia.com/graduation">Learn More Here</a> </p>
+            <h1>Graduation 2024</h1>
+            <p>We are pleased to announce that we will be broadcasting the 2024 Ferris High School Graduation. <a href="https://bugeyemedia.com/graduation">Learn More Here</a></p>
         </div>
         
         <!-- Break 1 -->
@@ -210,13 +211,13 @@
             <!-- Latest Project -->
             <div class="project latest-project">
                 <h3>Latest Project: Ferris FFA</h3>
-                <p>Description: We worked with Ferris FFA to showcase the skills, and family bonds you can create in FFA.</p>
+                <p>Description: We worked with Ferris FFA to showcase the skills and family bonds you can create in FFA.</p>
                 <a href="https://www.facebook.com/FerrisTXFFA/videos/1199483287699074/" class="project-button">View Final Product</a>
             </div>
 
             <!-- Other Projects -->
             <div class="project">
-                <h3>FHS Weekly Updates for the Week of February 26, 2024. </h3>
+                <h3>FHS Weekly Updates for the Week of February 26, 2024</h3>
                 <p>Description: FHS Weekly Updates for the Week of February 26, 2024.</p>
                 <a href="https://www.facebook.com/ferrishighschoolFISD/videos/430945876059434" class="project-button">View Final Product</a>
             </div>
