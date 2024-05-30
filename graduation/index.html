@@ -5,55 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graduation Livestream</title>
     <link rel="icon" href="https://bugeyemedia.com/images/BEM.png">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-            color: #333;
-        }
-        header {
-            background-color: #FF6F00;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        header img {
-            height: 50px;
-        }
-        header h1 {
-            color: white;
-            margin: 0;
-        }
-        .content {
-            text-align: center;
-            padding: 50px 20px;
-        }
-        .content h2 {
-            color: #FF6F00;
-        }
-        .content p {
-            color: #333;
-            font-size: 18px;
-        }
-        .notification-bar {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            display: none;
-        }
-        .toggle-button {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: #FF6F00;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -61,25 +13,19 @@
         <h1>Ferris ISD Graduation, 2024</h1>
     </header>
     <div class="notification-bar" id="notificationBar">
-        Graduation has been delayed due to weather concerns, Please stay tuned for further updates.
+        Graduation has been delayed due to weather concerns. Please stay tuned for further updates.
     </div>
     <div class="content">
         <h2>Join Us for the Graduation!</h2>
-        <p>We are excited to bring you the Ferris ISD graduation ceremony live on our and Ferris ISD'S Facebook page. This event Livestream is brought to you by BugEye Media.</p>
+        <p>We are excited to bring you the Ferris ISD graduation ceremony live on our and Ferris ISD's Facebook page. This event Livestream is brought to you by BugEye Media.</p>
         <p>Don't miss the special moments as we celebrate the achievements of our graduates.</p>
     </div>
-    <script>
-        function toggleNotification(visible) {
-            var notificationBar = document.getElementById('notificationBar');
-            if (visible) {
-                notificationBar.style.display = "block";
-            } else {
-                notificationBar.style.display = "none";
-            }
-        }
-        
-        // Call the function with true to show the notification, or false to hide it
-        toggleNotification(false);
-    </script>
+    <div class="updates" id="updatesSection">
+        <h3>Latest Updates</h3>
+        <p><strong>Update (May 30, 2024):</strong> Due to severe weather conditions, the graduation ceremony has been rescheduled to June 2nd, 2024. We apologize for any inconvenience caused and appreciate your understanding.</p>
+        <!-- Add more updates here -->
+    </div>
+    <button class="toggle-button" onclick="toggleUpdates()">Toggle Updates</button>
+    <script src="main.js"></script>
 </body>
 </html>
