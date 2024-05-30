@@ -139,6 +139,11 @@
             text-decoration: none;
             margin-top: 10px;
         }
+
+        /* Highlight active button */
+        .options .active-button {
+            background-color: gray; /* Change color for the active button */
+        }
     </style>
 </head>
 <body>
@@ -157,19 +162,18 @@
     </nav>
 
     <div class="container">
+        <div class="options">
+            <button id="currentMessageBtn" class="active-button">Welcome!</button>
+            <button id="newsBtn">News</button>
+        </div>
+
         <div class="welcome-section section active">
-            <div class="options">
-                <button id="currentMessageBtn">Welcome!</button>
-            </div>
             <h2>Welcome to BugEye Media</h2>
             <p>We are a full-service production team dedicated to bringing your vision to life. Whether you need video production, photography, or graphic design, we have the expertise to deliver satisfactory results.</p>
             <p>Contact us today to discuss your project!</p>
         </div>
 
         <div class="news-section section">
-            <div class="options">
-                <button id="newsBtn">News</button>
-            </div>
             <h2>Latest News</h2>
             <p>Here's the latest news from BugEye Media.</p>
             <h1>Graduation 2024</h1>
@@ -230,15 +234,37 @@
     </footer>
     
     <script>
-        document.getElementById("currentMessageBtn").addEventListener("click", function() {
-            document.getElementById("currentMessageSection").style.display = "block";
-            document.getElementById("newsSection").style.display = "none";
+        // Get references to the buttons
+        const currentMessageBtn = document.getElementById("currentMessageBtn");
+        const newsBtn = document.getElementById("newsBtn");
+
+        // Add event listeners to the buttons
+        currentMessageBtn.addEventListener("click", function() {
+            showWelcomeSection();
+            currentMessageBtn.classList.add("active-button");
+            newsBtn.classList.remove("active-button");
         });
 
-        document.getElementById("newsBtn").addEventListener("click", function() {
-            document.getElementById("currentMessageSection").style.display = "none";
-            document.getElementById("newsSection").style.display = "block";
+        newsBtn.addEventListener("click", function() {
+            showNewsSection();
+            newsBtn.classList.add("active-button");
+            currentMessageBtn.classList.remove("active-button");
         });
+
+        // Function to show the welcome section
+        function showWelcomeSection() {
+            document.querySelector(".welcome-section").style.display = "block";
+            document.querySelector(".news-section").style.display = "none";
+        }
+
+        // Function to show the news section
+        function showNewsSection() {
+            document.querySelector(".welcome-section").style.display = "none";
+            document.querySelector(".news-section").style.display = "block";
+        }
+
+        // Initially show the welcome section
+        showWelcomeSection();
     </script>
 </body>
 </html>
