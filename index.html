@@ -139,6 +139,12 @@
         footer {
             text-align: center; /* Center align text */
         }
+
+        /* Added styles for inactive button */
+        .inactive {
+            background-color: #888; /* Grey color */
+            cursor: default; /* Change cursor */
+        }
     </style>
 </head>
 <body>
@@ -161,7 +167,7 @@
         <div class="welcome-section section">
             <div class="options">
                 <button id="currentMessageBtn" class="active">Welcome!</button>
-                <button id="newsBtn">News</button>
+                <button id="newsBtn" class="inactive">News</button>
             </div>
             <h2>Welcome to BugEye Media</h2>
             <p>We are a full-service production team dedicated to bringing your vision to life. Whether you need video production, photography, or graphic design, we have the expertise to deliver satisfactory results.</p>
@@ -170,7 +176,7 @@
 
         <div class="news-section section">
             <div class="options">
-                <button id="currentMessageBtn">Welcome!</button>
+                <button id="currentMessageBtn" class="inactive">Welcome!</button>
                 <button id="newsBtn" class="active">News</button>
             </div>
             <h2>Latest News</h2>
@@ -250,12 +256,14 @@
             showWelcomeSection();
             currentMessageBtn.classList.add("active");
             newsBtn.classList.remove("active");
+            newsBtn.classList.add("inactive");
         });
 
         newsBtn.addEventListener("click", function() {
             showNewsSection();
             newsBtn.classList.add("active");
             currentMessageBtn.classList.remove("active");
+            currentMessageBtn.classList.add("inactive");
         });
 
         // Function to show the welcome section
