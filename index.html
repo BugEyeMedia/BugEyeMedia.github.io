@@ -60,17 +60,13 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .options-container {
-            background-color: #444;
-            padding: 10px;
-            text-align: center;
-        }
-
         .options {
-            display: inline-block;
+            margin-bottom: 20px;
+            text-align: center; /* Center the buttons */
         }
 
         .options button {
+            display: inline-block; /* Display buttons inline */
             background-color: #333;
             color: #fff;
             border: none;
@@ -80,8 +76,8 @@
             cursor: pointer;
         }
 
-        .options button.active {
-            background-color: #777; /* Greyed out color */
+        .options button:last-child {
+            margin-right: 0;
         }
 
         .section {
@@ -89,10 +85,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .active {
-            display: block;
+            background-color: #f2f2f2; /* Default section background color */
         }
 
         .welcome-section {
@@ -126,13 +119,6 @@
             display: inline-block;
         }
 
-        .banner {
-            background-color: #ffd700; /* Yellow color */
-            padding: 10px; /* Reduced padding */
-            text-align: center;
-            margin-bottom: 20px; /* Add margin to separate from content */
-        }
-
         .banner button {
             background-color: #333;
             color: #fff;
@@ -164,33 +150,35 @@
     </nav>
 
     <div class="container">
-        <div class="options-container">
+
+        <div class="welcome-section section">
             <div class="options">
                 <button id="currentMessageBtn" class="active">Welcome!</button>
                 <button id="newsBtn">News</button>
             </div>
-        </div>
-
-        <div class="welcome-section section active">
             <h2>Welcome to BugEye Media</h2>
             <p>We are a full-service production team dedicated to bringing your vision to life. Whether you need video production, photography, or graphic design, we have the expertise to deliver satisfactory results.</p>
             <p>Contact us today to discuss your project!</p>
         </div>
 
         <div class="news-section section">
+            <div class="options">
+                <button id="currentMessageBtn" class="active">Welcome!</button>
+                <button id="newsBtn">News</button>
+            </div>
             <h2>Latest News</h2>
             <br>
             <h1>Graduation 2024</h1>
             <p>We are pleased to announce that we will be broadcasting the 2024 Ferris High School Graduation. <a href="https://bugeyemedia.com/graduation">Learn More Here</a></p>
         </div>
-        
+
         <!-- Break 1 -->
         <br>
 
-        <a href="#" class="banner"> <!-- Yellow bar about graduation -->
-            <p>Graduation 2024: We are pleased to announce that we will be broadcasting the 2024 Ferris High School Graduation. <a href="https://bugeyemedia.com/graduation">Learn More Here</a></p>
+        <div class="banner"> <!-- Yellow bar about graduation -->
+            <p>Graduation 2024: We are pleased to announce that we will be broadcasting the 2024 Ferris High School Graduation. <a href="#">Learn More</a></p>
             <button>Learn More</button>
-        </a>
+        </div>
 
         <!-- Break 2 -->
         <br>
