@@ -60,13 +60,17 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
+        .options-container {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
         .options {
-            margin-bottom: 20px;
-            text-align: center; /* Center the buttons */
+            display: inline-block;
         }
 
         .options button {
-            display: inline-block; /* Display buttons inline */
             background-color: #333;
             color: #fff;
             border: none;
@@ -76,8 +80,8 @@
             cursor: pointer;
         }
 
-        .options button:last-child {
-            margin-right: 0;
+        .options button.active {
+            background-color: #777; /* Greyed out color */
         }
 
         .section {
@@ -160,9 +164,11 @@
     </nav>
 
     <div class="container">
-        <div class="options">
-            <button id="currentMessageBtn" class="active">Welcome!</button>
-            <button id="newsBtn">News</button>
+        <div class="options-container">
+            <div class="options">
+                <button id="currentMessageBtn" class="active">Welcome!</button>
+                <button id="newsBtn">News</button>
+            </div>
         </div>
 
         <div class="welcome-section section active">
@@ -181,10 +187,10 @@
         <!-- Break 1 -->
         <br>
 
-        <div class="banner"> <!-- Yellow bar about graduation -->
+        <a href="#" class="banner"> <!-- Yellow bar about graduation -->
             <p>Graduation 2024: We are pleased to announce that we will be broadcasting the 2024 Ferris High School Graduation. <a href="https://bugeyemedia.com/graduation">Learn More Here</a></p>
             <button>Learn More</button>
-        </div>
+        </a>
 
         <!-- Break 2 -->
         <br>
