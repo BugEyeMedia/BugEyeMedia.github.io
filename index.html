@@ -2,14 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
-    <meta name="keywords" content="BugEye Media, Ferris, Ferris High School, Ferris ISD">
-    <meta name="description" content="Ferris High School">
-     <meta name="author" content="BugEye Media">
-    <meta name="theme-color" content="#add8e6">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BugEye Media">
     <title>BugEye Media</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
-    
     <style>
         /* CSS styles */
         body {
@@ -22,15 +18,20 @@
         header {
             background-color: #333;
             color: #fff;
-            padding: 10px 20px; /* Reduced padding */
+            padding: 20px 0; /* Increased padding */
             text-align: center;
-            margin-bottom: 10px; /* Reduce margin */
-            border-bottom: none; /* Remove border */
+            margin-bottom: 20px; /* Increase margin */
+            border-bottom: 2px solid #ffd700; /* Add bottom border */
         }
 
         header img {
             vertical-align: middle; /* Align image vertically */
             margin-right: 10px; /* Adjust margin */
+        }
+
+        header h1 {
+            display: inline-block; /* Ensure h1 is in line with logo */
+            margin: 0;
         }
 
         nav {
@@ -57,20 +58,19 @@
 
         .container {
             max-width: 800px;
-            margin: 20px auto;
-            background-color: #fff;
+            margin: 0 auto; /* Center align */
             padding: 20px;
+            background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .options {
             margin-bottom: 20px;
-            text-align: center; /* Center the buttons */
+            text-align: center;
         }
 
         .options button {
-            display: inline-block; /* Display buttons inline */
             background-color: #333;
             color: #fff;
             border: none;
@@ -81,8 +81,8 @@
         }
 
         .options button.inactive {
-            background-color: #888; /* Grey color */
-            cursor: default; /* Change cursor */
+            background-color: #888;
+            cursor: default;
         }
 
         .options button:last-child {
@@ -94,7 +94,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #f2f2f2; /* Default section background color */
+            background-color: #f2f2f2;
         }
 
         .welcome-section {
@@ -109,30 +109,29 @@
             margin-top: 0;
         }
 
-        /* Added styles */
         .team-member {
             border: 1px solid #ccc;
             padding: 20px;
             margin-bottom: 20px;
-            border-radius: 10px; /* Rounded corners */
+            border-radius: 10px;
         }
 
         .project-button {
             background-color: #333;
             color: #fff;
             border: none;
-            border-radius: 5px; /* Adjust border-radius */
-            padding: 10px 20px; /* Adjust padding */
+            border-radius: 5px;
+            padding: 10px 20px;
             text-decoration: none;
             margin-top: 10px;
             display: inline-block;
         }
 
         .banner {
-            background-color: #ffd700; /* Yellow color */
-            padding: 10px; /* Reduced padding */
+            background-color: #ffd700;
+            padding: 10px;
             text-align: center;
-            margin-bottom: 20px; /* Add margin to separate from content */
+            margin-bottom: 20px;
         }
 
         .banner button {
@@ -146,14 +145,15 @@
         }
 
         footer {
-            text-align: center; /* Center align text */
+            text-align: center;
+            margin-top: 20px; /* Add margin to separate from content */
         }
     </style>
 </head>
 <body>
     <header>
         <img src="images/favicon.png" alt="BugEye Media Icon" height="30">
-        <h1 style="display: inline-block; vertical-align: middle; margin: 0;">BugEye Media</h1>
+        <h1>BugEye Media</h1> <!-- Updated header structure -->
     </header>
 
     <nav>
@@ -166,7 +166,6 @@
     </nav>
 
     <div class="container">
-
         <div class="welcome-section section">
             <div class="options">
                 <button id="currentMessageBtn" class="active">Welcome!</button>
@@ -185,7 +184,7 @@
             <h2>Latest News</h2>
             <br>
             <h1>Graduation 2024</h1>
-            <p>We are pleased to announce that we will be broadcasting the 2024 Ferris High School Graduation. <a href="#">Learn More</a></p>
+            <p>We are pleased to announce that we will be broadcasting the 2024 Ferris High School Graduation. <a href="https://example.com">Learn More</a></p> <!-- Provide proper link -->
         </div>
 
         <!-- Break 1 -->
@@ -238,53 +237,4 @@
 
             <!-- Other Projects -->
             <div class="project">
-                <h3>FHS Weekly Updates for the Week of February 26, 2024</h3>
-                <p>Description: FHS Weekly Updates for the Week of February 26, 2024.</p>
-                <a href="https://www.facebook.com/ferrishighschoolFISD/videos/430945876059434" class="project-button">View Final Product</a>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 BugEye Media. All rights reserved.</p>
-    </footer>
-    
-    <script>
-        // Get references to the buttons
-        const currentMessageBtn = document.getElementById("currentMessageBtn");
-        const newsBtn = document.getElementById("newsBtn");
-
-        // Add event listeners to the buttons
-        currentMessageBtn.addEventListener("click", function() {
-            showWelcomeSection();
-            currentMessageBtn.classList.add("active");
-            currentMessageBtn.classList.remove("inactive");
-            newsBtn.classList.remove("active");
-            newsBtn.classList.add("inactive");
-        });
-
-        newsBtn.addEventListener("click", function() {
-            showNewsSection();
-            newsBtn.classList.add("active");
-            newsBtn.classList.remove("inactive");
-            currentMessageBtn.classList.remove("active");
-            currentMessageBtn.classList.add("inactive");
-        });
-
-        // Function to show the welcome section
-        function showWelcomeSection() {
-            document.querySelector(".welcome-section").style.display = "block";
-            document.querySelector(".news-section").style.display = "none";
-        }
-
-        // Function to show the news section
-        function showNewsSection() {
-            document.querySelector(".welcome-section").style.display = "none";
-            document.querySelector(".news-section").style.display = "block";
-        }
-
-        // Initially show the welcome section
-        showWelcomeSection();
-    </script>
-</body>
-</html>
+                <h3>FHS Weekly Updates for the Week of February 26, 2024
